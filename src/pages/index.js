@@ -14,7 +14,7 @@ const IndexPage = () => (
 		<section className='h-100vh w-100vw flex align-center justify-center'>
 			<p className='max-600 text-center p30'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aperiam, ut unde aut corporis qui esse maiores ipsum! Fugit minima possimus iste quaerat repudiandae tenetur doloremque sunt illum beatae est.</p>
 		</section>
-    <section className='h-100vh w-100vw pos-rel overflow'>
+		<section className='h-100vh w-100vw pos-rel overflow'>
 			<StaticImage src='../images/image2.jpg' alt='2' className='w-100 h-100 bg-image' />
 		</section>
 	</Layout>
