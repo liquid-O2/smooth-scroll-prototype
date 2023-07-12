@@ -18,8 +18,10 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<main>
-				<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-				<SmoothScroll>{children}</SmoothScroll>
+				<SmoothScroll>
+					<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+					{children}
+				</SmoothScroll>
 			</main>
 			<Footer />
 		</>
