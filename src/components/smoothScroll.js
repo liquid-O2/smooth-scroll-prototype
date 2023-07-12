@@ -1,19 +1,21 @@
-import { useEffect } from "react"
-import Lenis from "@studio-freight/lenis"
+import React from "react"
+import { Lenis } from "@studio-freight/react-lenis"
 
-export default function SmoothScroll() {
-	useEffect(() => {
-		const body = document.body
-		const lenis = new Lenis({ wrapper: body, duration: 1.2, smoothWheel: true, normalizeWheel: true })
-		function raf(time) {
-			if (lenis) {
-				lenis.raf(time)
-				requestAnimationFrame(raf)
-			}
-		}
-		requestAnimationFrame(raf)
+const SCROLL_OPTIONS = {
+	duration: 1.25,
+	orientation: "vertical",
+	easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+	smoothWheel: true,
+	wheelMultiplier: 1,
+	smoothTouch: true,
+	touchMultiplier: 2,
+	infinite: false,
+}
 
-		return () => lenis.destroy()
-	}, [])
-	return null
+export default function SmoothScroll({ children }) {
+	return (
+		<Lenis root options={SCROLL_OPTIONS}>
+			{children}
+		</Lenis>
+	)
 }
