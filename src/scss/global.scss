@@ -22,18 +22,40 @@ a {
 	overflow: hidden;
 }
 
+.z-2 {
+	z-index: 2;
+}
+
+.text-white {
+	color: #fff;
+}
 /* ------------ Grid Styles ------------ */
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 100px;
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		row-gap: 20px;
+	}
+}
+
+.col-span-2 {
+	grid-column: 1 / 3;
+	@media (max-width: 768px) {
+		grid-column: 1 /1;
+	}
 }
 
 /* ------------ Flex Styles ------------ */
 
 .flex {
 	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
 }
 
 .flex-wrap {
@@ -44,8 +66,16 @@ a {
 	align-items: center;
 }
 
+.space-between {
+	justify-content: space-between;
+}
+
 .justify-center {
 	justify-content: center;
+}
+
+.flex-0 {
+	flex: 0 0;
 }
 
 /* ------------ Margin Styles ------------ */
@@ -62,6 +92,10 @@ a {
 	margin-left: auto;
 }
 
+.ml40 {
+	margin-left: 40px;
+}
+
 .mra {
 	margin-right: auto;
 }
@@ -70,8 +104,16 @@ a {
 	margin-top: auto;
 }
 
+.mtf {
+	margin-top: 196px;
+}
+
 .mba {
 	margin-bottom: auto;
+}
+
+.mbf {
+	margin-bottom: 196px;
 }
 
 /* ------------ Padding Styles ------------ */
@@ -84,22 +126,37 @@ a {
 	padding: 30px;
 }
 
+.p40 {
+	padding: 40px;
+}
+
 /* ------------ BG Styles ------------ */
 
 .pos-rel {
 	position: relative;
 }
 
-.bg-grey {
-	background-color: rgba(0, 0, 0, 0.1);
+.bg-black {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+.aspect-1-2 {
+	aspect-ratio: 1 / 2;
+}
+
+.aspect-16-9 {
+	aspect-ratio: 16 / 9;
+}
+
+.darken{
+	filter: brightness(0.4);
 }
 
 /* ------------ Image Styles ------------ */
 
 div.bg-image,
 .bg-image {
-	left: 0px;
-	top: 0px;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -130,6 +187,10 @@ div.bg-image,
 	width: 50%;
 }
 
+.w-80 {
+	width: 80%;
+}
+
 .w-100 {
 	width: 100%;
 }
@@ -148,14 +209,34 @@ div.bg-image,
 	height: 100vh;
 }
 
+.h-fit {
+	height: fit-content;
+}
+
 /* ------------ Max Styles ------------ */
 
 .max-600 {
 	max-width: 600px;
 }
 
+.max-80 {
+	max-width: 80%;
+}
+
 .max-1600 {
 	max-width: 1600px;
+}
+
+.max-h-300 {
+	max-height: 500px;
+}
+
+.max-h-900 {
+	max-height: 900px;
+}
+
+.max-h-1-2 {
+	max-height: 50%;
 }
 
 /* ------------ Mobile Styles ------------ */
@@ -182,5 +263,24 @@ div.bg-image,
 .m-100 {
 	@media (max-width: 768px) {
 		width: 100%;
+	}
+}
+
+
+.m-my80 {
+	@media (max-width: 768px) {
+		margin-block: 80px;
+	}
+}
+
+.m-mt80 {
+	@media (max-width: 768px) {
+		margin-top: 80px;
+	}
+}
+
+.m-mb80 {
+	@media (max-width: 768px) {
+		margin-bottom: 80px;
 	}
 }

@@ -1,8 +1,9 @@
 import React from "react"
-import { Lenis } from "@studio-freight/react-lenis"
+import { Lenis, useLenis } from "@studio-freight/react-lenis"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const SCROLL_OPTIONS = {
-	duration: 1.25,
+	duration: 1.2,
 	orientation: "vertical",
 	easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 	smoothWheel: true,
@@ -13,6 +14,10 @@ const SCROLL_OPTIONS = {
 }
 
 export default function SmoothScroll({ children }) {
+	const lenis = useLenis(() => {
+		ScrollTrigger.update()
+	})
+
 	return (
 		<Lenis root options={SCROLL_OPTIONS}>
 			{children}
