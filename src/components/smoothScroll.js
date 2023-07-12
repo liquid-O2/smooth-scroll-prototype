@@ -1,8 +1,7 @@
 import React from "react"
-import { Lenis as ReactLenis, useLenis } from "@studio-freight/react-lenis"
+import { Lenis as ReactLenis } from "@studio-freight/react-lenis"
 
 export default function SmoothScroll({ children }) {
-	const lenis = useLenis()
 	return (
 		<ReactLenis
 			root
