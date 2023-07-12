@@ -3,24 +3,27 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "../scss/site.scss"
+import SmoothScroll from "./smoothScroll"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
-      <Footer />
-    </>
-  )
+	const data = useStaticQuery(graphql`
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`)
+	return (
+		<>
+			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+			<main>
+				<SmoothScroll>{children}</SmoothScroll>
+			</main>
+			<Footer />
+		</>
+	)
 }
 
 export default Layout
