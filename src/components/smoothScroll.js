@@ -1,7 +1,11 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis"
 
 export default function SmoothScroll({ children }) {
+	const [isServer, setIsServer] = useState(true)
+	useEffect(() => {
+		setIsServer(s => !s)
+	}, [])
 	return (
 		<ReactLenis
 			root
