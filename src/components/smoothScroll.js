@@ -5,7 +5,7 @@ export default function SmoothScroll() {
 	useEffect(() => {
 		const lenis = new Lenis({ duration: 1.2 })
 		function raf() {
-			lenis.raf(2)
+			lenis.raf(20)
 			requestAnimationFrame(raf)
 		}
 		requestAnimationFrame(raf)
