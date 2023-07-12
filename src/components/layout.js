@@ -6,14 +6,6 @@ import "../scss/site.scss"
 import SmoothScroll from "./smoothScroll"
 
 const Layout = ({ children }) => {
-	const [isServer, setIsServer] = React.useState(true)
-
-	React.useEffect(() => {
-		setIsServer(false)
-
-		return () => setIsServer(true)
-	}, [])
-
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -27,7 +19,7 @@ const Layout = ({ children }) => {
 		<>
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<main>
-				{!isServer && <SmoothScroll />}
+				<SmoothScroll />
 				{children}
 			</main>
 			<Footer />
