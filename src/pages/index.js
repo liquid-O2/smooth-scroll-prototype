@@ -12,7 +12,7 @@ const IndexPage = () => (
 			<StaticImage src='../images/image1.jpg' alt='1' className='w-100 h-100 bg-image' />
 		</section>
 		<section className='h-100vh w-100vw flex align-center justify-center'>
-			<h2 className='max-600 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni labore dolor, facilis ipsa accusamus inventore eligendi sequi saepe ullam neque esse, exercitationem praesentium officia, voluptas natus est. Quae, quos deserunt?</h2>
+			<h2 className='max-600 text-center p20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni labore dolor, facilis ipsa accusamus inventore eligendi sequi saepe ullam neque esse, exercitationem praesentium officia, voluptas natus est. Quae, quos deserunt?</h2>
 		</section>
     <section className='h-100vh w-100vw pos-rel overflow'>
 			<StaticImage src='../images/image2.jpg' alt='2' className='w-100 h-100 bg-image' />
