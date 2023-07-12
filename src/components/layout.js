@@ -16,15 +16,13 @@ const Layout = ({ children }) => {
 		}
 	`)
 	return (
-		<>
+		<SmoothScroll>
 			<main>
-				<SmoothScroll>
-					<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-					{children}
-				</SmoothScroll>
+				<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+				{children}
 			</main>
 			<Footer />
-		</>
+		</SmoothScroll>
 	)
 }
 
