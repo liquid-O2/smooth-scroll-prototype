@@ -11,7 +11,7 @@ export default function SmoothScroll() {
 			requestAnimationFrame(raf)
 		}
 		requestAnimationFrame(raf)
-
+		lenis.start()
 		return () => {
 			lenis.destroy()
 			setIsWindow(false)
