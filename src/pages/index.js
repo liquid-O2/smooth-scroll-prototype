@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import HeroVideo from "../images/hero-video.mp4"
-import Footer from "../components/footer"
 
 const IndexPage = () => (
 	<Layout>

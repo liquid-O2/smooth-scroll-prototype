@@ -14,7 +14,6 @@ export default function ImageParallax({ children }) {
 					section,
 					{
 						yPercent: -30,
-						scale: 1.8,
 					},
 					{
 						scrollTrigger: {
